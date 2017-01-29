@@ -18,7 +18,7 @@ let queryAirport = (cityName, res) => {
 			console.error(e);
 			resJson.msg = e.message;
 			return res.json(resJson);
-		});
+		}).done();
 };
 
 module.exports = {

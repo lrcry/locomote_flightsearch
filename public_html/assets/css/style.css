@@ -31,7 +31,38 @@ body *:not(.fa) {
 }
 
 .wrapper-results {
+	margin-bottom: 80px;
+	margin-top: 30px;
+}
 
+.separator {
+	border: 1px solid #ccc;
+	margin-top: 6px;
+}
+
+.wrapper-results h1,
+.wrapper-results h2,
+.wrapper-results h3,
+.wrapper-results h4,
+.wrapper-results h5 {
+	margin-top: 0 !important;
+}
+
+.date-item {
+	margin-right: 10px;
+	color: #8a8a8a;
+}
+
+.date-item.active {
+	color: #333;
+	font-weight: bold;
+}
+
+.flight-item {
+	padding: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-color: #eee;
 }
 
 .form-input-group, .form-control {
@@ -72,6 +103,10 @@ body *:not(.fa) {
 
 .text-white {
 	color: #fff;
+}
+
+.text-gray {
+	color: #8a8a8a;
 }
 
 .text-bold {
