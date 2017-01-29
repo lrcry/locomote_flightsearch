@@ -1,3 +1,10 @@
 #!/bin/bash
 
-# build and startup restapi
+# install dependencies
+npm i;
+
+# config
+source appconfig.env;
+
+# startup restapi
+node server.js;

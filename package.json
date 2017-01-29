@@ -1,13 +1,11 @@
 {
         "name" : "flightsearch_restapi",
-        "version": "v0.0.3",
+        "version": "1.0.0",
         "main" : "server.js",
         "dependencies" : {
                 "express" : "~4.0.0",
                 "body-parser" : "~1.0.1",
                 "cors" : "~2.8.0",
-                "q" : "~1.4.1",
-                "moment" : "~2.14.1",
-                "winston": "~2.3.0"
+                "q" : "~1.4.1"
         }
 }

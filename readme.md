@@ -10,7 +10,7 @@ Hans Mong [Email](mailto:hanssmith6@gmail.com)
 
 ## Version
 
-v0.0.3
+v1.0.0
 
 ## Description
 
@@ -24,17 +24,23 @@ Simple flight searching webapp:
 
 ## Build & run
 
-TBC
+Run `start.sh` to do npm install, config and start on localhost port 3000
 
 ## Changelog
 
-### v0.0.4
+### v0.0.4 => v1.0.0
 
 * New features
 
 	- Add page layout and style
 
 	- Add search form and input interaction
+
+	- Add search API
+
+	- Add search result rendering on page
+
+	- Add tabs of +/- 2 days
 
 ### v0.0.3
 
