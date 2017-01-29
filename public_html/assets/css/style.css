@@ -1,0 +1,138 @@
+body *:not(.fa) {
+	font-family: 'Open Sans', Helvetica, Arial;
+}
+
+.fullscreen-wrapper {
+	width: 100%;
+	height: 100vh;
+}
+
+.loading-overlay {
+	background-color: rgba(23, 23, 23, 0.8);
+	position: fixed;
+	z-index: 4444;
+	display: none;
+}
+
+.loading-overlay-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.loading-overlay-tablecell {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.wrapper-search {
+	padding: 12px;
+	background-color: #333;
+}
+
+.wrapper-results {
+	margin-bottom: 80px;
+	margin-top: 30px;
+}
+
+.separator {
+	border: 1px solid #ccc;
+	margin-top: 6px;
+}
+
+.wrapper-results h1,
+.wrapper-results h2,
+.wrapper-results h3,
+.wrapper-results h4,
+.wrapper-results h5 {
+	margin-top: 0 !important;
+}
+
+.date-item {
+	margin-right: 10px;
+	color: #8a8a8a;
+}
+
+.date-item.active {
+	color: #333;
+	font-weight: bold;
+}
+
+.flight-item {
+	padding: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-color: #eee;
+}
+
+.form-input-group, .form-control {
+	width: 100%;
+}
+
+.form-input-group {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.form-control {
+	border-radius: 4px !important;
+	display: block;
+}
+
+.input-invalid {
+	background-color: #f2dede;
+}
+
+.input-hint {
+	width: calc(100% - 30px);
+	background-color: #eee;
+	z-index: 2222;
+	position: absolute;
+	display: none;
+	padding: 8px;
+}
+
+.airport-item {
+	cursor: pointer;
+}
+
+.close-hint {
+	display: block;
+	cursor: pointer;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-gray {
+	color: #8a8a8a;
+}
+
+.text-bold {
+	font-weight: 900;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.btn {
+	margin-right: 10px;
+}
+
+#btnReset {
+	margin-top: 1px;
+}
+
+footer {
+	background-color: #333;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 16px;
+}
