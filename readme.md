@@ -10,7 +10,7 @@ Hans Mong [Email](mailto:hanssmith6@gmail.com)
 
 ## Version
 
-v0.0.2
+v0.0.3
 
 ## Description
 
@@ -27,6 +27,14 @@ Simple flight searching webapp:
 TBC
 
 ## Changelog
+
+### v0.0.4
+
+* New features
+
+	- Add page layout and style
+
+	- Add search form and input interaction
 
 ### v0.0.3
 

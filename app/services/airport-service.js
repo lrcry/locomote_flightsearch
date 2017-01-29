@@ -15,6 +15,7 @@ let queryAirport = (cityName, res) => {
 			resJson.msg = 'Airports in ' + cityName + ' got';
 			return res.json(resJson);
 		}).catch((e) => {
+			console.error(e);
 			resJson.msg = e.message;
 			return res.json(resJson);
 		});
