@@ -3,10 +3,21 @@
  * Airport services
  */
 
-let queryAirport = (req, res) => {
-	return res.json({
-		'msg': 'airports list'
-	});
+let airportDao = require('../daos/airport-dao');
+
+let queryAirport = (cityName, res) => {
+	let resJson = { success: false };
+
+	airportDao.findByCityName(cityName)
+		.then((airportsList) => {
+			resJson.success = true;
+			resJson.data = airportsList;
+			resJson.msg = 'Airports in ' + cityName + ' got';
+			return res.json(resJson);
+		}).catch((e) => {
+			resJson.msg = e.message;
+			return res.json(resJson);
+		});
 };
 
 module.exports = {

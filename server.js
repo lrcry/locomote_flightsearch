@@ -31,7 +31,7 @@ router.route('/airlines')
 
 router.route('/airports')
 .get((req, res) => {
-	airportService.queryAirport(req, res);
+	airportService.queryAirport(req.query.city, res);
 });
 
 router.route('/search')

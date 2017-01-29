@@ -28,6 +28,12 @@ TBC
 
 ## Changelog
 
+### v0.0.3
+
+* New features
+
+	- Add get airports list API
+
 ### v0.0.2
 
 * New features
