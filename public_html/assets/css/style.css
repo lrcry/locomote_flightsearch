@@ -48,6 +48,10 @@ body *:not(.fa) {
 	display: block;
 }
 
+.input-invalid {
+	background-color: #f2dede;
+}
+
 .input-hint {
 	width: calc(100% - 30px);
 	background-color: #eee;

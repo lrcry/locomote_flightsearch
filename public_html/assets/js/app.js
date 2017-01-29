@@ -73,6 +73,10 @@ $('.input-airport-city').on('input', function(e) {
 	$(this).siblings('.input-hint').css('display', 'none');
 })
 
+$('.form-control').on('change', function(e) {
+	$(this).removeClass('input-invalid');
+})
+
 /****************************************************************
  ****************************************************************
  * Search form button
@@ -80,8 +84,14 @@ $('.input-airport-city').on('input', function(e) {
  ****************************************************************/
 
 $('#btnSearch').on('click', function() {
+	valiForm = validateSearchForm();
+	if (valiForm) {
+		alert(valiForm);
+		return;
+	}
+
 	date = new Date($('.form-control[name="departureDate"]').val());
-	formattedDate = formatDate(date);
+	formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
 
 	$('.loading-overlay').css('display', 'block');
 	setTimeout(function() {
@@ -90,21 +100,27 @@ $('#btnSearch').on('click', function() {
 })
 
 $('#btnReset').on('click', function() {
-	$('.form-control').val('');
+	$('.form-control').val('').removeClass('input-invalid');
 	$('.form-control.input-airport-city').attr('airport', '');
 })
 
-formatDate = function(date) {
-	dateStr = date.getFullYear();
-	dateStr += '-';
-	if (date.getMonth() + 1 < 10) {
-		dateStr += '0';
+validateSearchForm = function() {
+	$inputFromCity = $('.form-control[name="fromCity"]');
+	$inputToCity = $('.form-control[name="toCity"]');
+	$inputDepartureDate = $('.form-control[name="departureDate"]');
+
+	if (!$inputFromCity.val() || !$inputFromCity.attr('airport')) {
+		$inputFromCity.addClass('input-invalid');
+		return 'Please select the departure airport';
 	}
-	dateStr += date.getMonth() + 1;
-	dateStr += '-';
-	if (date.getDate() < 10) {
-		dateStr += '0';
+
+	if (!$inputToCity.val() || !$inputToCity.attr('airport')) {
+		$inputToCity.addClass('input-invalid');
+		return 'Please select the arrival airport';
 	}
-	dateStr += date.getDate();
-	return dateStr;
+
+	if (!$inputDepartureDate.val()) {
+		$inputDepartureDate.addClass('input-invalid');
+		return 'Please choose the date of your departure';
+	}
 }
