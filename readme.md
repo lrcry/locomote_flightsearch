@@ -10,7 +10,7 @@ Hans Mong [Email](mailto:hanssmith6@gmail.com)
 
 ## Version
 
-v0.0.1
+v0.0.2
 
 ## Description
 
@@ -24,10 +24,18 @@ Simple flight searching webapp:
 
 ## Build & run
 
+TBC
+
 ## Changelog
+
+### v0.0.2
+
+* New features
+
+	- Add get all airlines API
 
 ### v0.0.1
 
-* New Features
+* New features
 
 	- Init project
