@@ -11,6 +11,10 @@ let bodyParser = require('body-parser');
 let cors = require('cors');
 let url = require('url');
 
+let airlineService = require('./app/services/airline-service');
+let airportService = require('./app/services/airport-service');
+let searchService = require('./app/services/search-service');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -22,23 +26,21 @@ app.use('/', express.static(__dirname + '/public_html'));
 
 router.route('/airlines')
 .get((req, res) => {
-	res.json({
-		'msg': 'hello airlines'
-	})
+	airlineService.getAllAirlinesList(res);
 });
 
 router.route('/airports')
 .get((req, res) => {
-	res.json({
-		'msg': 'hello airports'
-	})
+	airportService.queryAirport(req, res);
 });
 
 router.route('/search')
 .get((req, res) => {
-	res.json({
-		'msg': 'hello search'
-	})
+	searchService.searchFlights(
+		req.query.from,
+		req.query.to,
+		req.query.date,
+		res);
 })
 
 // apply api router
