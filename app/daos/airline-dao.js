@@ -12,7 +12,7 @@ let findAll = () => {
 		http.get(flightApiAirlines, (res) => {
 			let body = '';
 
-			if (res == null || res.statusCode < 200 || res.statusCode > 299) {
+			if (res.statusCode < 200 || res.statusCode > 299) {
 				reject(new Error('Failed to load airlines, [HTTP ' + res.statusCode + ']'));
 			}
 

@@ -17,7 +17,7 @@ let getAllAirlinesList = (res) => {
 		}).catch((e) => {
 			resJson.msg = e.message;
 			return res.json(resJson);
-		});
+		}).done();
 }
 
 module.exports = {

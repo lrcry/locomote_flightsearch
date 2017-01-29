@@ -1,6 +1,6 @@
 {
         "name" : "flightsearch_restapi",
-        "version": "v0.0.1",
+        "version": "v0.0.3",
         "main" : "server.js",
         "dependencies" : {
                 "express" : "~4.0.0",
